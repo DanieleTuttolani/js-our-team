@@ -43,7 +43,7 @@ const members = [
 console.table(members)
 
 const grid = document.getElementById("grid");
-function prova (target, completeName, assignment, profile){
+function createCell (target, completeName, assignment, profile){
     //elementi
     const col = document.createElement("div");
     const foto = document.createElement("div");
@@ -54,8 +54,9 @@ function prova (target, completeName, assignment, profile){
     info.classList.add("member-info","text-center")
 
     foto.innerHTML = `${profile}`
-    info.innerText = `${completeName}`
-    info.innerText = `${assignment}`
+    info.innerHTML = `<p>${assignment}</p>`
+    info.innerHTML += `${completeName}`
+    console.log(info)
     //appendo al col i figli 
     col.appendChild(foto);
     col.appendChild(info);
@@ -63,4 +64,8 @@ function prova (target, completeName, assignment, profile){
     target.appendChild(col);
 }
 
-prova(grid, members[0].fullName,members[0].role,members[0].picture);
+
+//meet the squad
+for(let i = 0; i<= members.length; i++){
+    createCell(grid, members[i].fullName,members[i].role,members[].picture);
+}
