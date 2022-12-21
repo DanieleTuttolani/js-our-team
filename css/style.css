@@ -15,6 +15,16 @@ body{
 .alt-card{
     min-height: 200px;
 }
+/*sezione cards*/
 .foto-wrapper{
-    height: 150px;
+    min-height: 150px;
+}
+.foto-wrapper img{
+  max-width: 100%;
+  height: auto;
+}
+.member-info{
+    color: goldenrod;
+    min-height: 150px;
+    padding-top: 15%;
 }
